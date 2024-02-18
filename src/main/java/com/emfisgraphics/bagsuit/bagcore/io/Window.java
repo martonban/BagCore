@@ -1,4 +1,4 @@
-package com.emfisgraphics.bagsuit.bagcore.utils;
+package com.emfisgraphics.bagsuit.bagcore.io;
 
 import org.lwjgl.glfw.GLFWErrorCallback;
 import org.lwjgl.opengl.GL;

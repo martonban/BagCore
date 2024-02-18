@@ -1,7 +1,7 @@
 package com.emfisgraphics.bagsuit.bagcore;
 
 import com.emfisgraphics.bagsuit.bagcore.application.BagApplication;
-import com.emfisgraphics.bagsuit.bagcore.utils.Window;
+import com.emfisgraphics.bagsuit.bagcore.io.Window;
 
 public class TestApplication {
     // Software Enter Point
