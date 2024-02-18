@@ -92,12 +92,17 @@ public class Window {
         while(!glfwWindowShouldClose(glfwWindow)) {
             // Poll Events
             glfwPollEvents();
+
+            // Viewport init
             glViewport(0, 0, 1920, 1080);
             glClearColor(0.f, 0.f, 0.f, 0.f);
             glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
             glClearColor(0.f, 0.5f, 1.f, 1.f);
+
+            // Clear Buffers
             glClear(GL_COLOR_BUFFER_BIT);
             glfwSwapBuffers(glfwWindow);
+
             // Calculate delta time
             endTime = (float)glfwGetTime();
             dt = endTime - beginTime;
