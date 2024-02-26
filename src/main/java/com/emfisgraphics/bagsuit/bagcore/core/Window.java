@@ -8,6 +8,14 @@ import static org.lwjgl.glfw.GLFW.*;
 import static org.lwjgl.opengl.GL11.*;
 import static org.lwjgl.system.MemoryUtil.NULL;
 
+/*
+                    Bag Core - Window
+                Copyright (C) Márton Bán 2023
+
+    This class is responsible for....
+
+*/
+
 public class Window {
 
     // Singleton instance
