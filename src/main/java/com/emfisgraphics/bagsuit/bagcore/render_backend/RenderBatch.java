@@ -3,6 +3,7 @@ package com.emfisgraphics.bagsuit.bagcore.render_backend;
 import com.emfisgraphics.bagsuit.bagcore.bagengine.ecs.components.SpriteRendererComponent;
 import com.emfisgraphics.bagsuit.bagcore.render_frontend.Texture;
 import com.emfisgraphics.bagsuit.bagcore.resource_manager.AssetPool;
+import com.emfisgraphics.bagsuit.bagcore.core.Window;
 import org.joml.Vector2f;
 import org.joml.Vector4f;
 
@@ -12,7 +13,7 @@ import java.util.List;
 
 import static org.lwjgl.opengl.GL30.*;
 
-public class RenderBatch {
+public class RenderBatch implements Comparable<RenderBatch> {
     private final int POS_SIZE = 2;
     private final int COLOR_SIZE = 4;
     private final int POS_OFFSET = 0;
@@ -224,8 +225,10 @@ public class RenderBatch {
         return this.zIndex;
     }
 
+
     @Override
     public int compareTo(RenderBatch o) {
         return Integer.compare(this.zIndex, o.zIndex());
     }
+
 }

@@ -1,5 +1,8 @@
 package com.emfisgraphics.bagsuit.bagcore.core;
 
+import com.emfisgraphics.bagsuit.bagcore.bagengine.scene.RenderScene;
+import com.emfisgraphics.bagsuit.bagcore.bagengine.scene.Scene;
+import com.emfisgraphics.bagsuit.bagcore.platform_windows_layer.KeyListener;
 import org.lwjgl.glfw.GLFWErrorCallback;
 import org.lwjgl.opengl.GL;
 
@@ -27,6 +30,8 @@ public class Window {
 
     // GLFW Related Stuff
     private long glfwWindow;
+
+    private static Scene currentScene;
 
     // Constructor
     private Window(String title) {
@@ -78,11 +83,13 @@ public class Window {
             throw new IllegalStateException("Failed to load GLFW !");
         }
 
+        glfwSetKeyCallback(glfwWindow, KeyListener::keyCallback);
+
         // Create OpenGL Context
         glfwMakeContextCurrent(glfwWindow);
 
         // Enable """"v-sync""""
-        glfwSwapInterval(1);
+        //glfwSwapInterval(1);
 
         // Show the Window
         glfwShowWindow(glfwWindow);
@@ -93,8 +100,10 @@ public class Window {
         glEnable(GL_BLEND);
         glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
-        // Creating the render viewport(OpenGL Side)
-        glViewport(0, 0, 1920, 1080);
+
+        currentScene = new RenderScene();
+        currentScene.init();
+        currentScene.start();
     }
 
     public void loop() {
@@ -107,18 +116,12 @@ public class Window {
             // Poll Events
             glfwPollEvents();
 
-            // This part is the responsible for the PickingTexture functionality
-            // Getting ready OpenGL to render the PickingTexture
-            glDisable(GL_BLEND);
-            glViewport(0, 0, 1920, 1080);
-            glClearColor(0.f, 0.f, 0.f, 0.f);
-            glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-
-
-            glEnable(GL_BLEND);
-
-            glClearColor(1.f, 1.f, 1.f, 1.f);
+            glClearColor(1, 1, 1, 1);
             glClear(GL_COLOR_BUFFER_BIT);
+
+            if(dt >= 0) {
+                currentScene.update(dt);
+            }
 
             glfwSwapBuffers(glfwWindow);
 
@@ -127,5 +130,9 @@ public class Window {
             dt = endTime - beginTime;
             beginTime = endTime;
         }
+    }
+
+    public static Scene getScene() {
+        return currentScene;
     }
 }
