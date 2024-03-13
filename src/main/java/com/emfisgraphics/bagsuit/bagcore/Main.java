@@ -13,7 +13,7 @@ import com.emfisgraphics.bagsuit.bagcore.core.Window;
 public class Main {
     public static void main(String[] args) {
         //Singelton
-        Window window = Window.get("FASZ");
+        Window window = Window.get("Bag Engine");
         window.run();
     }
 }
