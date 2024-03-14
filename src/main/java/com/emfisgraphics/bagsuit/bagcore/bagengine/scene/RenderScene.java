@@ -3,10 +3,14 @@ package com.emfisgraphics.bagsuit.bagcore.bagengine.scene;
 import com.emfisgraphics.bagsuit.bagcore.bagengine.ecs.components.SpriteRendererComponent;
 import com.emfisgraphics.bagsuit.bagcore.bagengine.ecs.gameobjects.GameObject;
 import com.emfisgraphics.bagsuit.bagcore.bagengine.ecs.gameobjects.Transform;
+import com.emfisgraphics.bagsuit.bagcore.platform_windows_layer.KeyListener;
+import com.emfisgraphics.bagsuit.bagcore.render_backend.Framebuffer;
 import com.emfisgraphics.bagsuit.bagcore.render_frontend.Camera;
 import com.emfisgraphics.bagsuit.bagcore.render_frontend.Spritesheet;
 import com.emfisgraphics.bagsuit.bagcore.resource_manager.AssetPool;
 import org.joml.Vector2f;
+
+import static org.lwjgl.glfw.GLFW.GLFW_KEY_S;
 
 public class RenderScene extends Scene {
     private GameObject obj1;
@@ -63,6 +67,10 @@ public class RenderScene extends Scene {
 
     @Override
     public void update(float dt) {
+
+        if(KeyListener.isKeyPressed(GLFW_KEY_S)) {
+            obj1.transform.position.x += 0.1f;
+        }
 
         for (GameObject go : this.gameObjects) {
             go.update(dt);

@@ -7,6 +7,7 @@ import java.nio.IntBuffer;
 
 import static org.lwjgl.opengl.GL11.*;
 import static org.lwjgl.stb.STBImage.*;
+import static org.lwjgl.system.MemoryUtil.NULL;
 
 public class Texture {
     private String filePath;
@@ -51,6 +52,18 @@ public class Texture {
         stbi_image_free(image);
     }
 
+    // This Texture is crated to the framebuffers
+    public Texture(int width, int height) {
+        texID = glGenTextures();
+        glBindTexture(GL_TEXTURE_2D, texID);
+
+        glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, NULL);
+
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+    }
+
+
     public void bind() {
         glBindTexture(GL_TEXTURE_2D, texID);
     }
@@ -65,5 +78,9 @@ public class Texture {
 
     public int getHeight() {
         return height;
+    }
+
+    public int getTexID() {
+        return texID;
     }
 }
