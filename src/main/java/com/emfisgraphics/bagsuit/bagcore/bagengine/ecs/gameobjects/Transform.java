@@ -2,6 +2,16 @@ package com.emfisgraphics.bagsuit.bagcore.bagengine.ecs.gameobjects;
 
 import org.joml.Vector2f;
 
+/*
+----------------------------------------------------------------------------
+                        Bag Core - Transform
+
+    This class is original created by GamesWithGabe
+    Original repository: https://github.com/codingminecraft/MarioYoutube
+
+----------------------------------------------------------------------------
+*/
+
 public class Transform {
     public Vector2f position;
     public Vector2f scale;

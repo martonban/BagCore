@@ -12,11 +12,12 @@ import static org.lwjgl.opengl.GL11.*;
 import static org.lwjgl.system.MemoryUtil.NULL;
 
 /*
-                    Bag Core - Window
-                Copyright (C) Márton Bán 2023
+----------------------------------------------------------------------------
+                        Bag Core - Window
+                     Copyright (C) Márton Bán 2024
 
-    This class is responsible for....
 
+----------------------------------------------------------------------------
 */
 
 public class Window {

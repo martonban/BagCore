@@ -8,6 +8,16 @@ import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
 
+/*
+----------------------------------------------------------------------------
+                        Bag Core - AssetPool
+
+    This class is original created by GamesWithGabe
+    Original repository: https://github.com/codingminecraft/MarioYoutube
+
+----------------------------------------------------------------------------
+*/
+
 public class AssetPool {
     private static Map<String, Shader> shaders = new HashMap<>();
     private static Map<String, Texture> textures = new HashMap<>();

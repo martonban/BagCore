@@ -4,13 +4,21 @@ import com.emfisgraphics.bagsuit.bagcore.bagengine.ecs.components.SpriteRenderer
 import com.emfisgraphics.bagsuit.bagcore.bagengine.ecs.gameobjects.GameObject;
 import com.emfisgraphics.bagsuit.bagcore.bagengine.ecs.gameobjects.Transform;
 import com.emfisgraphics.bagsuit.bagcore.platform_windows_layer.KeyListener;
-import com.emfisgraphics.bagsuit.bagcore.render_backend.Framebuffer;
 import com.emfisgraphics.bagsuit.bagcore.render_frontend.Camera;
 import com.emfisgraphics.bagsuit.bagcore.render_frontend.Spritesheet;
 import com.emfisgraphics.bagsuit.bagcore.resource_manager.AssetPool;
 import org.joml.Vector2f;
 
 import static org.lwjgl.glfw.GLFW.GLFW_KEY_S;
+
+/*
+ *------------------------------------------------
+ *             Bag Core - RenderScene
+ *          Copyright (C) Márton Bán 2023
+ *
+ *
+ * ------------------------------------------------
+ */
 
 public class RenderScene extends Scene {
     private GameObject obj1;

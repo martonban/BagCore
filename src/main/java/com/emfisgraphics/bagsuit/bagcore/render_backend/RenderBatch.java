@@ -13,6 +13,16 @@ import java.util.List;
 
 import static org.lwjgl.opengl.GL30.*;
 
+/*
+----------------------------------------------------------------------------
+                        Bag Core - RenderBatch
+
+    This class is original created by GamesWithGabe
+    Original repository: https://github.com/codingminecraft/MarioYoutube
+
+----------------------------------------------------------------------------
+*/
+
 public class RenderBatch implements Comparable<RenderBatch> {
     private final int POS_SIZE = 2;
     private final int COLOR_SIZE = 4;

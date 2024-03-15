@@ -11,6 +11,16 @@ import java.nio.file.Paths;
 import static org.lwjgl.opengl.GL11.GL_FALSE;
 import static org.lwjgl.opengl.GL20.*;
 
+/*
+----------------------------------------------------------------------------
+                        Bag Core - Shader
+
+    This class is original created by GamesWithGabe
+    Original repository: https://github.com/codingminecraft/MarioYoutube
+
+----------------------------------------------------------------------------
+*/
+
 public class Shader {
     private int shaderProgramID;
     private boolean beingUsed = false;

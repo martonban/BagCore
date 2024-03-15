@@ -5,6 +5,16 @@ import org.joml.Vector2f;
 import java.util.ArrayList;
 import java.util.List;
 
+/*
+----------------------------------------------------------------------------
+                        Bag Core - Spritesheet
+
+    This class is original created by GamesWithGabe
+    Original repository: https://github.com/codingminecraft/MarioYoutube
+
+----------------------------------------------------------------------------
+*/
+
 public class Spritesheet {
     private Texture texture;
     private List<Sprite> sprites;

@@ -6,6 +6,16 @@ import com.emfisgraphics.bagsuit.bagcore.render_frontend.Texture;
 import org.joml.Vector2f;
 import org.joml.Vector4f;
 
+/*
+----------------------------------------------------------------------------
+                        Bag Core - SpriteRendererComponent
+
+    This class is original created by GamesWithGabe
+    Original repository: https://github.com/codingminecraft/MarioYoutube
+
+----------------------------------------------------------------------------
+*/
+
 public class SpriteRendererComponent extends Component {
     private Vector4f color;
     private Sprite sprite;

@@ -5,6 +5,16 @@ import com.emfisgraphics.bagsuit.bagcore.bagengine.ecs.components.Component;
 import java.util.ArrayList;
 import java.util.List;
 
+/*
+----------------------------------------------------------------------------
+                        Bag Core - GameObject
+
+    This class is original created by GamesWithGabe
+    Original repository: https://github.com/codingminecraft/MarioYoutube
+
+----------------------------------------------------------------------------
+*/
+
 public class GameObject {
     private String name;
     private List<Component> components;

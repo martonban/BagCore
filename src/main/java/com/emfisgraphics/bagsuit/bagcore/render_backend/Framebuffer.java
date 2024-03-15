@@ -4,6 +4,15 @@ import com.emfisgraphics.bagsuit.bagcore.render_frontend.Texture;
 
 import static org.lwjgl.opengl.GL30.*;
 
+/*
+----------------------------------------------------------------------------
+                        Bag Core - Framebuffer
+                     Copyright (C) Márton Bán 2024
+
+
+----------------------------------------------------------------------------
+*/
+
 public class Framebuffer {
 
     private int fboID = 0;

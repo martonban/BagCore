@@ -1,19 +1,19 @@
 package com.emfisgraphics.bagsuit.bagcore.platform_windows_layer;
 
-/*
-                    Bag Core - KeyListener
-
-    This class is original created by GamesWithGabe
-    Original repository: https://github.com/codingminecraft/MarioYoutube
-
-    This class is responsible to handle keyboard input from the user.
-
-*/
-
 import java.util.Arrays;
 
 import static org.lwjgl.glfw.GLFW.GLFW_PRESS;
 import static org.lwjgl.glfw.GLFW.GLFW_RELEASE;
+
+/*
+----------------------------------------------------------------------------
+                        Bag Core - KeyListener
+
+    This class is original created by GamesWithGabe
+    Original repository: https://github.com/codingminecraft/MarioYoutube
+
+----------------------------------------------------------------------------
+*/
 
 public class KeyListener {
     private static KeyListener instance;

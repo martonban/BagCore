@@ -4,6 +4,16 @@ import org.joml.Matrix4f;
 import org.joml.Vector2f;
 import org.joml.Vector3f;
 
+/*
+----------------------------------------------------------------------------
+                        Bag Core - Camera
+
+    This class is original created by GamesWithGabe
+    Original repository: https://github.com/codingminecraft/MarioYoutube
+
+----------------------------------------------------------------------------
+*/
+
 public class Camera {
     private Matrix4f projectionMatrix, viewMatrix;
     public Vector2f position;

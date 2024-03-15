@@ -7,6 +7,16 @@ import com.emfisgraphics.bagsuit.bagcore.render_frontend.Camera;
 import java.util.ArrayList;
 import java.util.List;
 
+/*
+----------------------------------------------------------------------------
+                        Bag Core - Scene
+
+    This class is original created by GamesWithGabe
+    Original repository: https://github.com/codingminecraft/MarioYoutube
+
+----------------------------------------------------------------------------
+*/
+
 public abstract class Scene {
     protected Renderer renderer = new Renderer();
     protected Camera camera;

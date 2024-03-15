@@ -2,6 +2,16 @@ package com.emfisgraphics.bagsuit.bagcore.render_frontend;
 
 import org.joml.Vector2f;
 
+/*
+----------------------------------------------------------------------------
+                        Bag Core - Sprite
+
+    This class is original created by GamesWithGabe
+    Original repository: https://github.com/codingminecraft/MarioYoutube
+
+----------------------------------------------------------------------------
+*/
+
 public class Sprite {
     private Texture texture;
     private Vector2f[] texCoords;
