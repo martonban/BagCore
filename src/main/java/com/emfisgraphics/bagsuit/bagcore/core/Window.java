@@ -134,7 +134,6 @@ public class Window {
             }
 
             this.framebuffer.unbind();
-            glDisable(GL_BLEND);
 
 
             KeyListener.endFrame();
