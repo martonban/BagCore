@@ -126,9 +126,6 @@ public class Window {
             // Poll Events
             glfwPollEvents();
 
-            this.framebuffer.bind();
-            //glEnable(GL_BLEND);
-
             glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
             glClear(GL_COLOR_BUFFER_BIT);
 
