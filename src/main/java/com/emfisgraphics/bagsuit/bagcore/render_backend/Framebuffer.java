@@ -26,13 +26,16 @@ public class Framebuffer {
 
         // Creating Texture to attach the rendering result to it (it's an ""empty"" texture)
         this.texture = new Texture(width, height);
-
         glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D, texture.getTexID(), 0);
 
         // Create RenderBuffer to store depth info
         int rboID = glGenRenderbuffers();
         glBindRenderbuffer(GL_RENDERBUFFER, rboID);
         glRenderbufferStorage(GL_RENDERBUFFER, GL_DEPTH_COMPONENT32, width, height);
+
+        // Attach texture and renderbuffer
+        glBindFramebuffer(GL_DRAW_BUFFER, fboID);
+        glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D,  texture.getTexID(), 0);
         glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_DEPTH_ATTACHMENT, GL_RENDERBUFFER, rboID);
 
         // The framebuffer will be ready when we attach at least one buffer to it. Like color, depth etc.
@@ -41,9 +44,12 @@ public class Framebuffer {
             assert false: "Error framebuffer is not ready";
         }
 
+        glBindFramebuffer(GL_DRAW_FRAMEBUFFER, 0);
+
+
         // Bind the framebuffer to the framebuffer target as the default framebuffer
-        glBindFramebuffer(fboID, 0);
-        glDeleteFramebuffers(fboID);
+        //glBindFramebuffer(fboID, 0);
+        //glDeleteFramebuffers(fboID);
     }
 
     public void deleteFramebuffer() {
@@ -51,11 +57,11 @@ public class Framebuffer {
     }
 
     public void bind() {
-        glBindFramebuffer(GL_FRAMEBUFFER, fboID);
+        glBindFramebuffer(GL_DRAW_FRAMEBUFFER, fboID);
     }
 
     public void unbind() {
-        glBindFramebuffer(GL_FRAMEBUFFER, 0);
+        glBindFramebuffer(GL_DRAW_FRAMEBUFFER, 0);
     }
 
     public int getFboID() {

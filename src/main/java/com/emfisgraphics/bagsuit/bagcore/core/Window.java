@@ -3,6 +3,9 @@ package com.emfisgraphics.bagsuit.bagcore.core;
 import com.emfisgraphics.bagsuit.bagcore.bagengine.scene.RenderScene;
 import com.emfisgraphics.bagsuit.bagcore.bagengine.scene.Scene;
 import com.emfisgraphics.bagsuit.bagcore.platform_windows_layer.KeyListener;
+import com.emfisgraphics.bagsuit.bagcore.render_backend.Framebuffer;
+import com.emfisgraphics.bagsuit.bagcore.render_backend.Shader;
+import com.emfisgraphics.bagsuit.bagcore.resource_manager.AssetPool;
 import org.lwjgl.glfw.GLFWErrorCallback;
 import org.lwjgl.opengl.GL;
 
@@ -33,6 +36,7 @@ public class Window {
     private long glfwWindow;
 
     private static Scene currentScene;
+    private Framebuffer framebuffer;
 
     // Constructor
     private Window(String title) {
@@ -90,7 +94,7 @@ public class Window {
         glfwMakeContextCurrent(glfwWindow);
 
         // Enable """"v-sync""""
-        //glfwSwapInterval(1);
+        glfwSwapInterval(1);
 
         // Show the Window
         glfwShowWindow(glfwWindow);
@@ -100,6 +104,9 @@ public class Window {
         GL.createCapabilities();
         glEnable(GL_BLEND);
         glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+
+        this.framebuffer = new Framebuffer(1920, 1080);
+        glViewport(0, 0, 1920, 1080);
 
 
         currentScene = new RenderScene();
@@ -113,9 +120,14 @@ public class Window {
         float endTime;
         float dt = -1.0f;
 
+        //Shader defaultShader = AssetPool.getShader("assets/shaders/default.glsl");
+
         while(!glfwWindowShouldClose(glfwWindow)) {
             // Poll Events
             glfwPollEvents();
+
+            this.framebuffer.bind();
+            //glEnable(GL_BLEND);
 
             glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
             glClear(GL_COLOR_BUFFER_BIT);
@@ -124,6 +136,11 @@ public class Window {
                 currentScene.update(dt);
             }
 
+            this.framebuffer.unbind();
+            glDisable(GL_BLEND);
+
+
+            KeyListener.endFrame();
             glfwSwapBuffers(glfwWindow);
 
             // Calculate delta time
