@@ -3,7 +3,6 @@ package com.emfisgraphics.bagsuit.bagcore.core;
 import com.emfisgraphics.bagsuit.bagcore.bagengine.scene.RenderScene;
 import com.emfisgraphics.bagsuit.bagcore.bagengine.scene.Scene;
 import com.emfisgraphics.bagsuit.bagcore.platform_windows_layer.KeyListener;
-import com.emfisgraphics.bagsuit.bagcore.render_backend.Framebuffer;
 import com.emfisgraphics.bagsuit.bagcore.render_backend.Shader;
 import com.emfisgraphics.bagsuit.bagcore.resource_manager.AssetPool;
 import org.lwjgl.glfw.GLFWErrorCallback;
@@ -36,7 +35,8 @@ public class Window {
     private long glfwWindow;
 
     private static Scene currentScene;
-    private Framebuffer framebuffer;
+
+    private Shader frameShader;
 
     // Constructor
     private Window(String title) {
@@ -105,7 +105,10 @@ public class Window {
         glEnable(GL_BLEND);
         glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
-        this.framebuffer = new Framebuffer(1920, 1080);
+
+        frameShader = AssetPool.getShader("assets/shaders/framebuffer.glsl");
+        frameShader.compile();
+
         glViewport(0, 0, 1920, 1080);
 
 
@@ -120,22 +123,18 @@ public class Window {
         float endTime;
         float dt = -1.0f;
 
-        //Shader defaultShader = AssetPool.getShader("assets/shaders/default.glsl");
-
         while(!glfwWindowShouldClose(glfwWindow)) {
             // Poll Events
             glfwPollEvents();
 
-            this.framebuffer.bind();
-
             glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
             glClear(GL_COLOR_BUFFER_BIT);
+
 
             if(dt >= 0) {
                 currentScene.update(dt);
             }
 
-            this.framebuffer.unbind();
             KeyListener.endFrame();
             glfwSwapBuffers(glfwWindow);
 
