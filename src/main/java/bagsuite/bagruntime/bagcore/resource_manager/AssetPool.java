@@ -1,8 +1,8 @@
-package com.emfisgraphics.bagsuit.bagcore.resource_manager;
+package bagsuite.bagruntime.bagcore.resource_manager;
 
-import com.emfisgraphics.bagsuit.bagcore.render_backend.Shader;
-import com.emfisgraphics.bagsuit.bagcore.render_frontend.Spritesheet;
-import com.emfisgraphics.bagsuit.bagcore.render_frontend.Texture;
+import bagsuite.bagruntime.bagcore.render_backend.Shader;
+import bagsuite.bagruntime.bagcore.render_frontend.Spritesheet;
+import bagsuite.bagruntime.bagcore.render_frontend.Texture;
 
 import java.io.File;
 import java.util.HashMap;

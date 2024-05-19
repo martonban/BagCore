@@ -1,8 +1,8 @@
-package com.emfisgraphics.bagsuit.bagcore.bagengine.ecs.components;
+package bagsuite.bagruntime.bagcore.bagengine.ecs.components;
 
-import com.emfisgraphics.bagsuit.bagcore.bagengine.ecs.gameobjects.Transform;
-import com.emfisgraphics.bagsuit.bagcore.render_frontend.Sprite;
-import com.emfisgraphics.bagsuit.bagcore.render_frontend.Texture;
+import bagsuite.bagruntime.bagcore.render_frontend.Sprite;
+import bagsuite.bagruntime.bagcore.bagengine.ecs.gameobjects.Transform;
+import bagsuite.bagruntime.bagcore.render_frontend.Texture;
 import org.joml.Vector2f;
 import org.joml.Vector4f;
 

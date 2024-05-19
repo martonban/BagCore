@@ -1,6 +1,6 @@
-package com.emfisgraphics.bagsuit.bagcore.bagengine.ecs.gameobjects;
+package bagsuite.bagruntime.bagcore.bagengine.ecs.gameobjects;
 
-import com.emfisgraphics.bagsuit.bagcore.bagengine.ecs.components.Component;
+import bagsuite.bagruntime.bagcore.bagengine.ecs.components.Component;
 
 import java.util.ArrayList;
 import java.util.List;

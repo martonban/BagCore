@@ -1,4 +1,4 @@
-package com.emfisgraphics.bagsuit.bagcore.bagengine.ecs.gameobjects;
+package bagsuite.bagruntime.bagcore.bagengine.ecs.gameobjects;
 
 import org.joml.Vector2f;
 

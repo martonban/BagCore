@@ -1,4 +1,4 @@
-package com.emfisgraphics.bagsuit.bagcore.platform_windows_layer;
+package bagsuite.bagruntime.bagcore.platform_windows_layer;
 
 import java.util.Arrays;
 

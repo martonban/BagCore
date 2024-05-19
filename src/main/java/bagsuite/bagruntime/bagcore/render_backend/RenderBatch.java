@@ -1,9 +1,9 @@
-package com.emfisgraphics.bagsuit.bagcore.render_backend;
+package bagsuite.bagruntime.bagcore.render_backend;
 
-import com.emfisgraphics.bagsuit.bagcore.bagengine.ecs.components.SpriteRendererComponent;
-import com.emfisgraphics.bagsuit.bagcore.render_frontend.Texture;
-import com.emfisgraphics.bagsuit.bagcore.resource_manager.AssetPool;
-import com.emfisgraphics.bagsuit.bagcore.core.Window;
+import bagsuite.bagruntime.bagcore.bagengine.ecs.components.SpriteRendererComponent;
+import bagsuite.bagruntime.bagcore.render_frontend.Texture;
+import bagsuite.bagruntime.bagcore.resource_manager.AssetPool;
+import bagsuite.bagruntime.bagcore.core.Window;
 import org.joml.Vector2f;
 import org.joml.Vector4f;
 

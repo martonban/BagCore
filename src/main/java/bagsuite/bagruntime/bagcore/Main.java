@@ -1,6 +1,6 @@
-package com.emfisgraphics.bagsuit.bagcore;
+package bagsuite.bagruntime.bagcore;
 
-import com.emfisgraphics.bagsuit.bagcore.core.Window;
+import bagsuite.bagruntime.bagcore.core.Window;
 
 /*
                     Bag Core - Entry Point

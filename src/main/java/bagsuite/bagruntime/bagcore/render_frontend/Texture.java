@@ -1,4 +1,4 @@
-package com.emfisgraphics.bagsuit.bagcore.render_frontend;
+package bagsuite.bagruntime.bagcore.render_frontend;
 
 import org.lwjgl.BufferUtils;
 

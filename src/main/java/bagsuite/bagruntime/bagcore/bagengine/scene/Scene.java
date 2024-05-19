@@ -1,8 +1,8 @@
-package com.emfisgraphics.bagsuit.bagcore.bagengine.scene;
+package bagsuite.bagruntime.bagcore.bagengine.scene;
 
-import com.emfisgraphics.bagsuit.bagcore.bagengine.ecs.gameobjects.GameObject;
-import com.emfisgraphics.bagsuit.bagcore.render_backend.Renderer;
-import com.emfisgraphics.bagsuit.bagcore.render_frontend.Camera;
+import bagsuite.bagruntime.bagcore.bagengine.ecs.gameobjects.GameObject;
+import bagsuite.bagruntime.bagcore.render_backend.Renderer;
+import bagsuite.bagruntime.bagcore.render_frontend.Camera;
 
 import java.util.ArrayList;
 import java.util.List;

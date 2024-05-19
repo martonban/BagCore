@@ -1,8 +1,8 @@
-package com.emfisgraphics.bagsuit.bagcore.render_backend;
+package bagsuite.bagruntime.bagcore.render_backend;
 
-import com.emfisgraphics.bagsuit.bagcore.bagengine.ecs.components.SpriteRendererComponent;
-import com.emfisgraphics.bagsuit.bagcore.bagengine.ecs.gameobjects.GameObject;
-import com.emfisgraphics.bagsuit.bagcore.render_frontend.Texture;
+import bagsuite.bagruntime.bagcore.bagengine.ecs.components.SpriteRendererComponent;
+import bagsuite.bagruntime.bagcore.bagengine.ecs.gameobjects.GameObject;
+import bagsuite.bagruntime.bagcore.render_frontend.Texture;
 
 import java.util.ArrayList;
 import java.util.Collections;

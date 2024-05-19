@@ -1,12 +1,12 @@
-package com.emfisgraphics.bagsuit.bagcore.bagengine.scene;
+package bagsuite.bagruntime.bagcore.bagengine.scene;
 
-import com.emfisgraphics.bagsuit.bagcore.bagengine.ecs.components.SpriteRendererComponent;
-import com.emfisgraphics.bagsuit.bagcore.bagengine.ecs.gameobjects.GameObject;
-import com.emfisgraphics.bagsuit.bagcore.bagengine.ecs.gameobjects.Transform;
-import com.emfisgraphics.bagsuit.bagcore.platform_windows_layer.KeyListener;
-import com.emfisgraphics.bagsuit.bagcore.render_frontend.Camera;
-import com.emfisgraphics.bagsuit.bagcore.render_frontend.Spritesheet;
-import com.emfisgraphics.bagsuit.bagcore.resource_manager.AssetPool;
+import bagsuite.bagruntime.bagcore.bagengine.ecs.components.SpriteRendererComponent;
+import bagsuite.bagruntime.bagcore.bagengine.ecs.gameobjects.GameObject;
+import bagsuite.bagruntime.bagcore.bagengine.ecs.gameobjects.Transform;
+import bagsuite.bagruntime.bagcore.platform_windows_layer.KeyListener;
+import bagsuite.bagruntime.bagcore.render_frontend.Camera;
+import bagsuite.bagruntime.bagcore.render_frontend.Spritesheet;
+import bagsuite.bagruntime.bagcore.resource_manager.AssetPool;
 import org.joml.Vector2f;
 
 import static org.lwjgl.glfw.GLFW.GLFW_KEY_S;

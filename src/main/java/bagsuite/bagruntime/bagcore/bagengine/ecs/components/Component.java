@@ -1,6 +1,6 @@
-package com.emfisgraphics.bagsuit.bagcore.bagengine.ecs.components;
+package bagsuite.bagruntime.bagcore.bagengine.ecs.components;
 
-import com.emfisgraphics.bagsuit.bagcore.bagengine.ecs.gameobjects.GameObject;
+import bagsuite.bagruntime.bagcore.bagengine.ecs.gameobjects.GameObject;
 
 /*
 ----------------------------------------------------------------------------

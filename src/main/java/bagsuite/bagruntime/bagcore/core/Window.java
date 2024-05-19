@@ -1,10 +1,10 @@
-package com.emfisgraphics.bagsuit.bagcore.core;
+package bagsuite.bagruntime.bagcore.core;
 
-import com.emfisgraphics.bagsuit.bagcore.bagengine.scene.RenderScene;
-import com.emfisgraphics.bagsuit.bagcore.bagengine.scene.Scene;
-import com.emfisgraphics.bagsuit.bagcore.platform_windows_layer.KeyListener;
-import com.emfisgraphics.bagsuit.bagcore.render_backend.Shader;
-import com.emfisgraphics.bagsuit.bagcore.resource_manager.AssetPool;
+import bagsuite.bagruntime.bagcore.render_backend.Shader;
+import bagsuite.bagruntime.bagcore.resource_manager.AssetPool;
+import bagsuite.bagruntime.bagcore.bagengine.scene.RenderScene;
+import bagsuite.bagruntime.bagcore.bagengine.scene.Scene;
+import bagsuite.bagruntime.bagcore.platform_windows_layer.KeyListener;
 import org.lwjgl.glfw.GLFWErrorCallback;
 import org.lwjgl.opengl.GL;
 
